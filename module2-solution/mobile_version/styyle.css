@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Common Section Styles */
+.section {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Chicken, Beef, and Sushi take 100% width */
+.chicken, .beef, .sushi {
+    width: 100%;
+}
+
+/* Specific colors for each section */
+.chicken {
+    background-color: grey;
+    color: black;
+}
+
+.beef {
+    background-color: grey;
+    color: black;
+}
+
+.sushi {
+    background-color: grey;
+    color: black;
+}
+
+/* Small box for section title */
+.section-title {
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Adjusting title colors */
+.chicken .section-title {
+    color: black;
+}
+
+.beef .section-title {
+    color: black; /* Now beef title is also black */
+}
+
+.sushi .section-title {
+    color: black;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Make everything stack vertically on mobile */
+    .container {
+        flex-direction: column;
+        align-items: stretch;  /* Ensures sections take full width */
+    }
+
+    /* Section titles and content will take full width on mobile */
+    .chicken, .beef, .sushi {
+        width: 100%;
+    }
+}
